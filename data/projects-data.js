@@ -243,9 +243,10 @@ export const BUILDER_DATA = {
         logo: "/projects/high-street-park/images/high-street-park-logo.png",
         hero: "/projects/high-street-park/images/high-street-park-plots.jpg",
         dayImage: "/projects/high-street-park/images/high-street-park-plots.jpg",
-        nightImage: "",
+        nightImage: "/projects/high-street-park/images/high-street-park-night.jpg",
         gallery: [
           "/projects/high-street-park/images/high-street-park-plots.jpg",
+          "/projects/high-street-park/images/high-street-park-night.jpg",
           "/projects/high-street-park/images/high-street-park-villa.jpg",
           "/projects/high-street-park/images/high-street-park-hero.jpg",
           "/projects/high-street-park/images/high-street-park-main.jpg"
@@ -381,8 +382,11 @@ export const BUILDER_DATA = {
       media: {
         logo: "",
         hero: "/projects/akshardham/images/akshardham-plots.jpg",
+        dayImage: "/projects/akshardham/images/akshardham-plots.jpg",
+        nightImage: "/projects/akshardham/images/akshardham-night.jpg",
         gallery: [
-          "/projects/akshardham/images/akshardham-plots.jpg"
+          "/projects/akshardham/images/akshardham-plots.jpg",
+          "/projects/akshardham/images/akshardham-night.jpg"
         ],
         floorPlans: [],
         layouts: [],
@@ -460,8 +464,11 @@ export const BUILDER_DATA = {
       media: {
         logo: "",
         hero: "/projects/austin-tower/images/austin-tower.jpg",
+        dayImage: "/projects/austin-tower/images/austin-tower.jpg",
+        nightImage: "/projects/austin-tower/images/austin-tower-night.jpg",
         gallery: [
-          "/projects/austin-tower/images/austin-tower.jpg"
+          "/projects/austin-tower/images/austin-tower.jpg",
+          "/projects/austin-tower/images/austin-tower-night.jpg"
         ],
         floorPlans: [],
         layouts: [],
@@ -539,8 +546,11 @@ export const BUILDER_DATA = {
       media: {
         logo: "",
         hero: "/projects/beverly-hills/images/beverly-hills.jpg",
+        dayImage: "/projects/beverly-hills/images/beverly-hills.jpg",
+        nightImage: "/projects/beverly-hills/images/beverly-hills-night.jpg",
         gallery: [
-          "/projects/beverly-hills/images/beverly-hills.jpg"
+          "/projects/beverly-hills/images/beverly-hills.jpg",
+          "/projects/beverly-hills/images/beverly-hills-night.jpg"
         ],
         floorPlans: [],
         layouts: [],
@@ -618,8 +628,11 @@ export const BUILDER_DATA = {
       media: {
         logo: "",
         hero: "/projects/sky-villas/images/sky-villas.jpg",
+        dayImage: "/projects/sky-villas/images/sky-villas.jpg",
+        nightImage: "/projects/sky-villas/images/sky-villas-night.jpg",
         gallery: [
-          "/projects/sky-villas/images/sky-villas.jpg"
+          "/projects/sky-villas/images/sky-villas.jpg",
+          "/projects/sky-villas/images/sky-villas-night.jpg"
         ],
         floorPlans: [],
         layouts: [],
@@ -697,8 +710,11 @@ export const BUILDER_DATA = {
       media: {
         logo: "",
         hero: "/projects/shiv-vihar-2/images/shiv-vihar-2.jpg",
+        dayImage: "/projects/shiv-vihar-2/images/shiv-vihar-2.jpg",
+        nightImage: "/projects/shiv-vihar-2/images/shiv-vihar-2-night.jpg",
         gallery: [
-          "/projects/shiv-vihar-2/images/shiv-vihar-2.jpg"
+          "/projects/shiv-vihar-2/images/shiv-vihar-2.jpg",
+          "/projects/shiv-vihar-2/images/shiv-vihar-2-night.jpg"
         ],
         floorPlans: [],
         layouts: [],
@@ -776,8 +792,11 @@ export const BUILDER_DATA = {
       media: {
         logo: "",
         hero: "/projects/shiv-aanagn/images/shiv-aanagn.jpg",
+        dayImage: "/projects/shiv-aanagn/images/shiv-aanagn.jpg",
+        nightImage: "/projects/shiv-aanagn/images/shiv-aanagn-night.jpg",
         gallery: [
-          "/projects/shiv-aanagn/images/shiv-aanagn.jpg"
+          "/projects/shiv-aanagn/images/shiv-aanagn.jpg",
+          "/projects/shiv-aanagn/images/shiv-aanagn-night.jpg"
         ],
         floorPlans: [],
         layouts: [],
@@ -855,8 +874,11 @@ export const BUILDER_DATA = {
       media: {
         logo: "",
         hero: "/projects/shiv-vihar-1/images/shiv-vihar-1.jpg",
+        dayImage: "/projects/shiv-vihar-1/images/shiv-vihar-1.jpg",
+        nightImage: "/projects/shiv-vihar-1/images/shiv-vihar-1-night.jpg",
         gallery: [
-          "/projects/shiv-vihar-1/images/shiv-vihar-1.jpg"
+          "/projects/shiv-vihar-1/images/shiv-vihar-1.jpg",
+          "/projects/shiv-vihar-1/images/shiv-vihar-1-night.jpg"
         ],
         floorPlans: [],
         layouts: [],
@@ -933,8 +955,11 @@ export const BUILDER_DATA = {
       media: {
         logo: "",
         hero: "/projects/padmavati-arcade/images/padmavati-arcade.jpg",
+        dayImage: "/projects/padmavati-arcade/images/padmavati-arcade.jpg",
+        nightImage: "/projects/padmavati-arcade/images/padmavati-arcade-night.jpg",
         gallery: [
-          "/projects/padmavati-arcade/images/padmavati-arcade.jpg"
+          "/projects/padmavati-arcade/images/padmavati-arcade.jpg",
+          "/projects/padmavati-arcade/images/padmavati-arcade-night.jpg"
         ],
         floorPlans: [],
         layouts: [],

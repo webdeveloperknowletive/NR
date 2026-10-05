@@ -123,6 +123,16 @@ export default function ProjectCTA({ project }) {
           <span>Mon – Sun: 9:00 AM – 7:30 PM</span>
         </div>
       </div>
+
+      <div className="cta-compliance-strip">
+        <div className="compliance-row">
+          <span>© 2026 NR Real Estate. All rights reserved.</span>
+          <span>Powered by Knowletive Services</span>
+        </div>
+        <div className="compliance-row dpdp-note">
+          <span>Digital Personal Data Protection (DPDP) Act, 2023 Compliant • User data is processed strictly in accordance with consent and verified enquiry protocols.</span>
+        </div>
+      </div>
     </section>
   );
 }

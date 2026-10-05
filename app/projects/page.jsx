@@ -5,8 +5,8 @@ export default function Projects() {
   const companyLogo = BUILDER_DATA.company?.logo || '/brand/nr-real-estate-logo.png';
 
   return (
-    <main className="projects-page section-light" style={{ minHeight: '100vh', paddingTop: '150px' }}>
-      <header className="site-nav">
+    <main className="projects-page section-light" style={{ minHeight: '100vh', paddingTop: '120px' }}>
+      <header className="site-nav scrolled">
         <Link href="/" className="brand" aria-label="Go to top">
           <img src={companyLogo} alt={BUILDER_DATA.company?.name || 'NR Real Estate Logo'} style={{ height: '32px', border: '1px solid rgba(255,255,255,0.4)', borderRadius: '6px', boxShadow: '0 0 10px rgba(255,255,255,0.2)' }} />
         </Link>
@@ -22,7 +22,7 @@ export default function Projects() {
         <h2>Featured Projects</h2>
       </div>
 
-      <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '40px', marginTop: '60px' }}>
+      <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))', gap: '30px', marginTop: '40px' }}>
         {BUILDER_DATA.projects.map(project => {
           const projectType = project.classification?.category || project.classification?.type || project.type || '';
           const projectLocation = typeof project.location === 'object' && project.location !== null
@@ -48,6 +48,16 @@ export default function Projects() {
           );
         })}
       </div>
+
+      <footer style={{ marginTop: '90px', paddingTop: '28px', borderTop: '1px solid rgba(16, 16, 16, 0.15)', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '11px', color: '#555', fontFamily: "'DM Mono', monospace", letterSpacing: '0.08em' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
+          <span>© 2026 NR REAL ESTATE. ALL RIGHTS RESERVED.</span>
+          <span>POWERED BY KNOWLETIVE SERVICES</span>
+        </div>
+        <div style={{ opacity: 0.72, fontSize: '9px' }}>
+          DIGITAL PERSONAL DATA PROTECTION (DPDP) ACT, 2023 COMPLIANT • SECURE DATA GOVERNANCE &amp; USER PRIVACY ASSURED
+        </div>
+      </footer>
     </main>
   );
 }

@@ -1,8 +1,16 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'CityMotion — Built in Motion',
-  description: 'A cinematic, scroll-driven landing page built around an aerial city film.',
+  title: 'NR Real Estate — Exceptional Living & Plotted Communities in Pune',
+  description: 'Premier residential towers, luxury villas, and sanctioned plotted communities in Pune and PCMC by NR Real Estate.',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: 'cover',
+  themeColor: '#101010',
 };
 
 export default function RootLayout({ children }) {

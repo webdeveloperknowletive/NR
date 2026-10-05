@@ -12,13 +12,17 @@ export default function ProjectDayNight({ project }) {
   const dayImage =
     project.media?.dayImage ||
     gallery.find((img) => img.includes('day')) ||
-    project.media?.hero;
+    project.media?.hero ||
+    (gallery.length > 0 ? gallery[0] : null);
 
-  const nightImage =
+  const rawNightImage =
     project.media?.nightImage ||
     gallery.find((img) => img.includes('night'));
 
-  const [activeMode, setActiveMode] = useState('night'); // Evening illumination is dramatic by default
+  const hasDedicatedNight = Boolean(rawNightImage && rawNightImage.trim() !== '');
+  const nightImage = hasDedicatedNight ? rawNightImage : dayImage;
+
+  const [activeMode, setActiveMode] = useState(hasDedicatedNight ? 'night' : 'day');
 
   const hasVideo = Boolean(videoSrc && videoSrc.trim() !== '');
   const hasImages = Boolean(dayImage || nightImage);
@@ -40,7 +44,7 @@ export default function ProjectDayNight({ project }) {
         </p>
 
         {/* Toggle switch between Day & Night when images are used */}
-        {!hasVideo && dayImage && nightImage ? (
+        {!hasVideo && (dayImage || nightImage) ? (
           <div className="daynight-toggle-group">
             <button
               type="button"
@@ -94,7 +98,26 @@ export default function ProjectDayNight({ project }) {
                 className={`daynight-layer daynight-night-layer ${
                   activeMode === 'night' ? 'visible' : 'hidden'
                 }`}
+                style={
+                  !hasDedicatedNight
+                    ? { filter: 'brightness(0.48) contrast(1.2) saturate(1.2) hue-rotate(195deg)' }
+                    : undefined
+                }
                 loading="lazy"
+              />
+            ) : null}
+
+            {!hasDedicatedNight && activeMode === 'night' ? (
+              <div
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background:
+                    'radial-gradient(circle at 50% 40%, rgba(30, 45, 85, 0.4) 0%, rgba(5, 10, 22, 0.75) 100%)',
+                  mixBlendMode: 'multiply',
+                  pointerEvents: 'none',
+                  zIndex: 2,
+                }}
               />
             ) : null}
 
