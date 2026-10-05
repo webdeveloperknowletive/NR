@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --ink: #101010;
-  --paper: #f3f1eb;
-  --muted: rgba(16, 16, 16, 0.58);
-  --line: rgba(16, 16, 16, 0.16);
+  --ink: #f5f5f7;
+  --paper: #0a0a0c;
+  --muted: rgba(245, 245, 247, 0.58);
+  --line: rgba(245, 245, 247, 0.16);
   --scroll-p: 0;
 }
 
