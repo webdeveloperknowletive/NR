@@ -52,9 +52,29 @@ export default function Home() {
     // Choose optimal video source: lightweight mobile video on small screens
     const isMobile = window.innerWidth <= 768;
     const desiredSrc = isMobile ? '/video/hero-scrub-mobile.mp4' : '/video/hero-scrub-1080p.mp4';
-    if (!video.src.endsWith(desiredSrc)) {
-      video.src = desiredSrc;
-      video.load();
+    
+    // Fetch video as blob to prevent network stuttering during scrubbing
+    if (video.dataset.blobSrc !== desiredSrc) {
+      video.dataset.blobSrc = desiredSrc;
+      
+      // Cleanup previous blob URL if exists
+      if (video.dataset.blobUrl) {
+        URL.revokeObjectURL(video.dataset.blobUrl);
+      }
+
+      fetch(desiredSrc)
+        .then(res => res.blob())
+        .then(blob => {
+          const objectUrl = URL.createObjectURL(blob);
+          video.dataset.blobUrl = objectUrl;
+          video.src = objectUrl;
+          video.load();
+        })
+        .catch(err => {
+          console.error('Failed to preload video blob', err);
+          video.src = desiredSrc;
+          video.load();
+        });
     }
 
     const cacheGeometry = () => {
